@@ -1,16 +1,15 @@
-
 type resultType = number | any
 
 interface IObjectKeys {
     [key: number]: number | undefined;
-  }
+}
 
 const findPair = (input: number[], milestone: number) => {
     let hashMap: IObjectKeys = {};
     let results: resultType[] = [];
     for (let i = 0; i < input.length; i++) {
         const temp = input[i];
-        if(input[i] === milestone){
+        if (input[i] === milestone) {
             results.push(milestone)
         }
         else if (hashMap[input[i]]) {
